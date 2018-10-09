@@ -7,12 +7,13 @@ Now that you know what sets are, we can go on and work with two sets that are of
 
 ## Objectives
 
-In this lab, you'll 
-- learn about experiments, outcomes and event space
-- will be introduced to probability through the law of relative frequency
-- learn about the probability axioms
-- learn about the addition law of probability
-- learn that where each outcome is equally likely, the probability is equal to number of outcomes in the event space divided by number of outcomes in the sample space 
+You will be able to:
+
+- Learn about experiments, outcomes and event space
+- Understand probability through the law of relative frequency
+- Learn about the probability axioms
+- Learn about the addition law of probability
+- Learn that where each outcome is equally likely, the probability is equal to number of outcomes in the event space divided by number of outcomes in the sample space
 
 ##  Sample space, event space and the law of relative frequency
 
@@ -432,7 +433,7 @@ np.sum((sample_mf[:,4:]== ['M','M']).all(axis=1))/sample_length
 
 You noticed that coming up with the sample space was probably the most time-consuming part of the exercise, and it would really become unfeasible to write this down for say, 10 or, even worse, 20 appointments in a row. You'll learn about methods that make this easy in the next lecture!
 
-# The Addition Law of Probability
+## The Addition Law of Probability
 At a supermarket, we randomly select customers, and make notes of whether a certain customer owns a Visa card (event A) or an Amex credit card (event B). Some customers own both cards.
 You can assume that:
 
@@ -459,10 +460,3 @@ You can assume that:
 ## Summary
 
 In this lab, you got to practice your knowledge on the foundations of probability through working on problems regarding the law of relative frequency, the probability axioms and the addition law of probability.
-
-# Sources
-
-https://en.wikipedia.org/wiki/Probability_axioms
-
-https://www.datacamp.com/community/tutorials/statistics-python-tutorial-probability-1
-
