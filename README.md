@@ -264,7 +264,7 @@ print(prob_sum_8)
 
 ## Now let's try creating your own event space!
 
-A teaching assistant is holding office hours so students can make appointments. She has 6 appointments scheduled today, 3 by male students, and 2 by female students. 
+A teaching assistant is holding office hours so students can make appointments. She has 6 appointments scheduled today, 3 by male students, and 3 by female students. 
 
 Create a NumPy array te say way as we did this for you in the "throwing a dice twice" exercise. It will be quite a bit of typing, as your resulting NumPy array will have a shape (20,6)!
 
