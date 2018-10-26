@@ -126,7 +126,7 @@ You come across some numbers and find the list of probabilities of being an inha
 - P(Antarctica) = 0.000
 - P(Asia) = 0.598
 - P(Europe) = 0.10
-- P(North-America) = 0.078
+- P(North-America) = 0.079
 - P(Australia) = 0.005
 - P(South-America) = 0.057
 
