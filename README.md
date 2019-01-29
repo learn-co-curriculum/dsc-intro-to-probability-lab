@@ -333,7 +333,7 @@ print(prob_sum_8)
 
 A teaching assistant is holding office hours so students can make appointments. She has 6 appointments scheduled today, 3 by male students, and 3 by female students. 
 
-Create a NumPy array te say way as we did this for you in the "throwing a dice twice" exercise. It will be quite a bit of typing, as your resulting NumPy array will have a shape (20,6)!
+Create a NumPy array to list the event space, (all the possible permutations of these appointments) the same way as we did this for you in the "throwing a dice twice" exercise. It will be quite a bit of typing, as your resulting NumPy array will have a shape (20,6)!
 
 
 ```python
