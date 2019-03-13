@@ -10,16 +10,17 @@ Now that you know what sets are, we can go on and work with two sets that are of
 You will be able to:
 
 - Learn about experiments, outcomes and event space
-- Understand probability through the law of relative frequency
+- Understand probability through relative frequency
 - Learn about the probability axioms
 - Learn about the addition law of probability
 - Learn that where each outcome is equally likely, the probability is equal to number of outcomes in the event space divided by number of outcomes in the sample space
 
+
 ##  Sample space, event space and the law of relative frequency
 
-#### a. Let's throw a dice once: formula of Laplace
+#### a. Let's throw a dice once
 
-First, create a set `roll_dice` that holds the sample space.
+First, create a set `roll_dice` that holds the sample space of rolling a 6-sided dice once.
 
 
 ```python
@@ -33,7 +34,7 @@ Now, let's assume that the event space is defined by "throwing a number higher t
 event = set([5,6])
 ```
 
-Now use the formule $P(E) = \dfrac{|E|}{|S|}$ to calculate the probability.
+Now use the formula $P(E) = \dfrac{|E|}{|S|}$ (this formula is called "Laplace's formula" and strongly related to the law of relative frequency) to calculate the probability.
 
 
 ```python
@@ -333,7 +334,7 @@ print(prob_sum_8)
 
 A teaching assistant is holding office hours so students can make appointments. She has 6 appointments scheduled today, 3 by male students, and 3 by female students. 
 
-Create a NumPy array to list the event space, (all the possible permutations of these appointments) the same way as we did this for you in the "throwing a dice twice" exercise. It will be quite a bit of typing, as your resulting NumPy array will have a shape (20,6)!
+Create a NumPy array of possible outcomes in the same way as we did in the "throwing a dice twice" exercise. It will be quite a bit of typing, as your resulting NumPy array will have a shape (20,6)!
 
 
 ```python
