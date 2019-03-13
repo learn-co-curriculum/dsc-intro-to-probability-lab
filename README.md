@@ -112,16 +112,6 @@ You come across some numbers and find the list of probabilities of being an inha
 
 store these values using the variable names below:
 
-- P(Africa) = 0.161
-- P(Antarctica) = 0.000
-- P(Asia) = 0.598
-- P(Europe) = 0.10
-- P(North-America) = 0.079
-- P(Australia) = 0.005
-- P(South-America) = 0.057
-
-store these values using the variable names below:
-
 
 ```python
 P_afr = None
