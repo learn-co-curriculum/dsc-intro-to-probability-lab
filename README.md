@@ -112,6 +112,16 @@ You come across some numbers and find the list of probabilities of being an inha
 
 store these values using the variable names below:
 
+- P(Africa) = 0.161
+- P(Antarctica) = 0.000
+- P(Asia) = 0.598
+- P(Europe) = 0.10
+- P(North-America) = 0.079
+- P(Australia) = 0.005
+- P(South-America) = 0.057
+
+store these values using the variable names below:
+
 
 ```python
 P_afr = None
@@ -171,6 +181,23 @@ None
 ```
 
 Great! We tested it and seems like our set `continents` is a true probability space.
+
+## Some more practice on the sample and event spaces
+
+In this exercise, we'll look at possible outcomes when throwing a dice twice. For your convenience, we created the NumPy array below.
+
+Next, we'll compute a couple or probabilities associated with doing this.
+
+
+```python
+import numpy as np
+sample_dice = np.array([(1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6),
+              (2, 1), (2, 2), (2, 3), (2, 4), (2, 5), (2, 6),
+              (3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (3, 6),
+              (4, 1), (4, 2), (4, 3), (4, 4), (4, 5), (4, 6),
+              (5, 1), (5, 2), (5, 3), (5, 4), (5, 5), (5, 6),
+              (6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6)])
+```
 
 ## Some more practice on the sample and event spaces
 
