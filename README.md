@@ -189,23 +189,6 @@ sample_dice = np.array([(1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6),
               (6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6)])
 ```
 
-## Some more practice on the sample and event spaces
-
-In this exercise, we'll look at possible outcomes when throwing a dice twice. For your convenience, we created the NumPy array below.
-
-Next, we'll compute a couple or probabilities associated with doing this.
-
-
-```python
-import numpy as np
-sample_dice = np.array([(1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6),
-              (2, 1), (2, 2), (2, 3), (2, 4), (2, 5), (2, 6),
-              (3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (3, 6),
-              (4, 1), (4, 2), (4, 3), (4, 4), (4, 5), (4, 6),
-              (5, 1), (5, 2), (5, 3), (5, 4), (5, 5), (5, 6),
-              (6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6)])
-```
-
 Look at the shape of the array to reassure we haven't made any mistakes.
 
 
@@ -354,6 +337,19 @@ You can assume that:
 3) compute the probability that a customer *only* owns VISA card.
 
 (You can use python here, but you don't have to)
+
+
+
+
+```python
+#__SOLUTION__
+
+# 1) $P(A\cup B) = P(A) + P(B) - P(A\cap B)  = 0.5+0.4-0.25 = 0.65 $
+
+# 2) $1 - P(A\cup B) = 0.35 $
+
+# 3) $P(A)-P(B\cap A) = 0.25$
+```
 
 ## Summary
 
