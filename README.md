@@ -74,7 +74,7 @@ np.random.randint(1,7) # you will get a random value between 1 and 6. See how it
 
 
 
-Now, let's repeat this expermient 10 times, then 1000 times, then 1 million times, then 100 million times. 
+Now, let's repeat this experiment 10 times, then 1000 times, then 1 million times, then 100 million times. 
 You can do this by specifying the argument `size` within the numpy function used above. Store the values in the pre-defined variables below.
 
 
@@ -161,7 +161,7 @@ We want to make sure that the three probability axioms are fulfilled, because th
 - if we have an event space $E$ and a probability measure $P$, 
 - **and** the three probability axioms are fulfilled, 
 
-The third axiom is fairly ad hoc, and you will basically have to deduct from the context whether individual events are independent. It is fairly straightforward, however, that people can not be inhabitants of two continents at the same time, so for now, we will assume that we're good for axiom three.
+The third axiom is fairly ad hoc, and you will basically have to deduce from the context whether individual events are independent. It is fairly straightforward, however, that people can not be inhabitants of two continents at the same time, so for now, we will assume that we're good for axiom three.
 
 However, we can use the numpy array `continents` to verify if axiom 1 and 2 are fulfilled. Create a function "axioms" that returns the message "We're good!" if both axiom 1 and 2 are fulfilled, and "Not quite!" if that's not the case.
 
@@ -249,7 +249,7 @@ Use Python to obtain the following probabilities:
 
 #### a. What is the probability of throwing a 5 at least once?
 
-First, use sample_dice to get "True" values for each time a 5 occurs.
+First, use sample_dice to get "True" values for each time a 5 occurs. This means that, 
 
 
 ```python
@@ -450,13 +450,7 @@ You can assume that:
 
 (You can use python here, but you don't have to)
 
-**Solution**
 
-1) $P(A\cup B) = P(A) + P(B) - P(A\cap B)  = 0.5+0.4-0.25 = 0.65 $
-
-2) $1 - P(A\cup B) = 0.35 $
-
-3) $P(A)-P(B\cap A) = 0.25$
 
 ## Summary
 
