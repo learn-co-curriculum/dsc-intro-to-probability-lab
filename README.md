@@ -347,21 +347,11 @@ sample_dice = np.array([(1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6),
               (6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6)])
 ```
 
-## Some more practice on the sample and event spaces
-
-In this exercise, we'll look at possible outcomes when throwing a dice twice. For your convenience, we created the NumPy array below.
-
-Next, we'll compute a couple or probabilities associated with doing this.
+Look at the shape of the array to reassure we haven't made any mistakes.
 
 
 ```python
-import numpy as np
-sample_dice = np.array([(1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6),
-              (2, 1), (2, 2), (2, 3), (2, 4), (2, 5), (2, 6),
-              (3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (3, 6),
-              (4, 1), (4, 2), (4, 3), (4, 4), (4, 5), (4, 6),
-              (5, 1), (5, 2), (5, 3), (5, 4), (5, 5), (5, 6),
-              (6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6)])
+None # should be equal to (36,2)
 ```
 
 
@@ -377,19 +367,6 @@ sample_dice.shape # should be equal to (36,2)
 
 
 
-Look at the shape of the array to reassure we haven't made any mistakes.
-
-
-```python
-None # should be equal to (36,2)
-```
-
-
-```python
-# __SOLUTION__ 
-set_5 = sample_dice == (5)
-```
-
 Use Python to obtain the following probabilities:
 
 #### a. What is the probability of throwing a 5 at least once?
@@ -404,14 +381,8 @@ set_5 = None # Your output should be shape (36, 2) but with booleans instead of 
 
 ```python
 # __SOLUTION__ 
-true_5 = np.any(set_5, axis = 1)
-print(true_5)
+set_5 = sample_dice == (5)
 ```
-
-    [False False False False  True False False False False False  True False
-     False False False False  True False False False False False  True False
-      True  True  True  True  True  True False False False False  True False]
-
 
 Next, make sure that you get a value `True` for each pair where at least one 5 was thrown.
 
@@ -425,11 +396,13 @@ print(true_5)
 
 ```python
 # __SOLUTION__ 
-prob_5 = true_5.sum()/len(sample_dice)
-print(prob_5)
+true_5 = np.any(set_5, axis = 1)
+print(true_5)
 ```
 
-    0.3055555555555556
+    [False False False False  True False False False False False  True False
+     False False False False  True False False False False False  True False
+      True  True  True  True  True  True False False False False  True False]
 
 
 Applying the `sum()` function you can get to the total number of items in the event space. Divide this by the total number in the sample space.
@@ -443,11 +416,32 @@ print(prob_5)
 
 ```python
 # __SOLUTION__ 
+prob_5 = true_5.sum()/len(sample_dice)
+print(prob_5)
+```
+
+    0.3055555555555556
+
+
+#### b. What is the probability of throwing a 5 or 6 at least once?
+
+
+```python
+set_5 = None
+set_6 = None
+```
+
+
+```python
+# __SOLUTION__ 
 set_5 =  sample_dice == (5)
 set_6 = sample_dice == (6)
 ```
 
-#### b. What is the probability of throwing a 5 or 6 at least once?
+
+```python
+set_5_6 = None
+```
 
 
 ```python
@@ -457,8 +451,8 @@ set_5_6 = (set_6 + set_5)
 
 
 ```python
-set_5 = None
-set_6 = None
+set_any_5_6 = None
+print(set_any_5_6) 
 ```
 
 
@@ -475,7 +469,8 @@ print(set_any_5_6)
 
 
 ```python
-set_5_6 = None
+prob_5_6 = None
+print(prob_5_6)
 ```
 
 
@@ -488,16 +483,12 @@ print(prob_5_6)
     0.5555555555555556
 
 
-
-```python
-set_any_5_6 = None
-print(set_any_5_6) 
-```
+#### c. What is the probability of the outcome having a sum of exactly 8?
 
 
 ```python
-prob_5_6 = None
-print(prob_5_6)
+sum_dice = None
+sum_8 = None
 ```
 
 
@@ -507,7 +498,11 @@ sum_dice = np.sum(sample_dice, axis = 1)
 sum_8 = sum(sum_dice == 8)
 ```
 
-#### c. What is the probability of the outcome having a sum of exactly 8?
+
+```python
+prob_sum_8 = None
+print(prob_sum_8)
+```
 
 
 ```python
@@ -519,16 +514,15 @@ print(prob_sum_8)
     0.1388888888888889
 
 
+## Now let's try creating your own event space!
+
+A teaching assistant is holding office hours so students can make appointments. She has 6 appointments scheduled today, 3 by male students, and 3 by female students. 
+
+Create a NumPy array of possible outcomes in the same way as we did in the "throwing a dice twice" exercise. It will be quite a bit of typing, as your resulting NumPy array will have a shape (20,6)!
+
 
 ```python
-sum_dice = None
-sum_8 = None
-```
-
-
-```python
-prob_sum_8 = None
-print(prob_sum_8)
+sample_mf= None
 ```
 
 
@@ -543,11 +537,10 @@ sample_mf= np.array([("M","M","M","F","F","F"), ("M","M","F","M","F","F"), ("M",
                      ("F","M","M","F","F","M"), ("F","M","M","M","F","F") ])
 ```
 
-## Now let's try creating your own event space!
 
-A teaching assistant is holding office hours so students can make appointments. She has 6 appointments scheduled today, 3 by male students, and 3 by female students. 
-
-Create a NumPy array of possible outcomes in the same way as we did in the "throwing a dice twice" exercise. It will be quite a bit of typing, as your resulting NumPy array will have a shape (20,6)!
+```python
+None # get the shape of sample_mf
+```
 
 
 ```python
@@ -564,7 +557,8 @@ sample_mf.shape
 
 
 ```python
-sample_mf= None
+sample_length= None
+print(sample_length)
 ```
 
 
@@ -581,15 +575,14 @@ sample_length
 
 
 
+#### 1. Calculate the probability that at least 2 out of the first 3 appointments are with female students
+
+First, select the first 3 appointment slots and check for "F".
+
 
 ```python
-None # get the shape of sample_mf
-```
-
-
-```python
-sample_length= None
-print(sample_length)
+first_3_F = None
+None
 ```
 
 
@@ -621,9 +614,11 @@ print(first_3_F)
      [ True False False]]
 
 
-#### 1. Calculate the probability that at least 2 out of the first 3 appointments are with female students
 
-First, select the first 3 appointment slots and check for "F".
+```python
+num_F = None
+print(num_F)
+```
 
 
 ```python
@@ -637,33 +632,14 @@ print(num_F)
 
 
 ```python
-first_3_F = None
-None
+F_2plus = None
+print(F_2plus)
 ```
 
 
 ```python
 # __SOLUTION__ 
 F_2plus = np.sum(num_F > 1)
-print(F_2plus)
-```
-
-
-```python
-num_F = None
-print(num_F)
-```
-
-
-```python
-# __SOLUTION__ 
-prob_F_2plus = F_2plus.sum()/sample_length
-print(prob_F_2plus)
-```
-
-
-```python
-F_2plus = None
 print(F_2plus)
 ```
 
@@ -676,7 +652,8 @@ print(prob_F_2plus)
 
 ```python
 # __SOLUTION__ 
-np.sum((sample_mf[:,4:]== ['M','M']).all(axis=1))/sample_length
+prob_F_2plus = F_2plus.sum()/sample_length
+print(prob_F_2plus)
 ```
 
 #### 2. Calculate the probability that after 4 appointment slots, all the female students have had an appointment
@@ -684,6 +661,12 @@ np.sum((sample_mf[:,4:]== ['M','M']).all(axis=1))/sample_length
 
 ```python
 None
+```
+
+
+```python
+# __SOLUTION__ 
+np.sum((sample_mf[:,4:]== ['M','M']).all(axis=1))/sample_length
 ```
 
 You noticed that coming up with the sample space was probably the most time-consuming part of the exercise, and it would really become unfeasible to write this down for say, 10 or, even worse, 20 appointments in a row. You'll learn about methods that make this process easier soon!
@@ -703,6 +686,19 @@ You can assume that:
 3) compute the probability that a customer *only* owns VISA card.
 
 (You can use python here, but you don't have to)
+
+
+
+
+```python
+#__SOLUTION__
+
+# 1) $P(A\cup B) = P(A) + P(B) - P(A\cap B)  = 0.5+0.4-0.25 = 0.65 $
+
+# 2) $1 - P(A\cup B) = 0.35 $
+
+# 3) $P(A)-P(B\cap A) = 0.25$
+```
 
 ## Summary
 
