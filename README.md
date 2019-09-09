@@ -691,7 +691,7 @@ You can assume that:
 
 
 ```python
-#__SOLUTION__
+# __SOLUTION__
 
 # 1) $P(A\cup B) = P(A) + P(B) - P(A\cap B)  = 0.5+0.4-0.25 = 0.65 $
 
