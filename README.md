@@ -452,6 +452,16 @@ You can assume that:
 
 
 
+
+```python
+
+# 1) $P(A\cup B) = P(A) + P(B) - P(A\cap B)  = 0.5+0.4-0.25 = 0.65 $
+
+# 2) $1 - P(A\cup B) = 0.35 $
+
+# 3) $P(A)-P(B\cap A) = 0.25$
+```
+
 ## Summary
 
 In this lab, you got to practice your knowledge on the foundations of probability through working on problems regarding the law of relative frequency, the probability axioms and the addition law of probability.
