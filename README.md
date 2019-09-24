@@ -3,17 +3,17 @@
 
 ## Introduction
 
-Now that you know what sets are, we can go on and work with two sets that are of key importance when talking about probability: the event space and the sample space. These two concepts are foundational for calculating probabilities when assuming each event in the event space *has a same probability of happening*. Typical examples are rolling a dice (if the dice is "fair", the chance of throwing each number between 1 and 6 is 1/6) and flipping a coin (1/2 heads vs tails). You'll get a better sense of how all of this works in this lab.
+Now that you know what sets are, we can go on and work with two sets that are of key importance when talking about probability: the event space and the sample space. These two concepts are foundational for calculating probabilities when assuming each event in the event space *has the same probability of happening*. Typical examples are rolling a dice (if the dice is "fair", the chance of throwing each number between 1 and 6 is 1/6) and flipping a coin (1/2 heads vs tails). You'll get a better sense of how all of this works in this lab.
 
 ## Objectives
 
 You will be able to:
 
-- Learn about experiments, outcomes and event space
+- Learn about experiments, outcomes, and event space
 - Understand probability through relative frequency
 - Learn about the probability axioms
 - Learn about the addition law of probability
-- Learn that where each outcome is equally likely, the probability is equal to number of outcomes in the event space divided by number of outcomes in the sample space
+- Learn that when each outcome is equally likely, the probability is equal to number of outcomes in the event space divided by number of outcomes in the sample space
 
 
 ##  Sample space, event space and the law of relative frequency
@@ -230,13 +230,13 @@ print(continents)
     [0.161 0.    0.598 0.1   0.079 0.005 0.057]
 
 
-We want to make sure that the three probability axioms are fulfilled, because they assure us that $(\Omega,E,P)$ is a **probability space**:
+We want to make sure that the three probability axioms are fulfilled because they assure us that $(\Omega,E,P)$ is a **probability space**:
 
 - if we have a sample space $S$ (or $\Omega$)
 - if we have an event space $E$ and a probability measure $P$, 
 - **and** the three probability axioms are fulfilled, 
 
-The third axiom is fairly ad hoc, and you will basically have to deduce from the context whether individual events are independent. It is fairly straightforward, however, that people can not be inhabitants of two continents at the same time, so for now, we will assume that we're good for axiom three.
+The third axiom is fairly ad hoc, and you will basically have to deduce from the context whether individual events are independent. It is fairly straightforward, however, that people cannot be inhabitants of two continents at the same time, so for now, we will assume that we're good for axiom three.
 
 However, we can use the numpy array `continents` to verify if axiom 1 and 2 are fulfilled. Create a function "axioms" that returns the message "We're good!" if both axiom 1 and 2 are fulfilled, and "Not quite!" if that's not the case.
 
@@ -702,4 +702,4 @@ You can assume that:
 
 ## Summary
 
-In this lab, you got to practice your knowledge on the foundations of probability through working on problems regarding the law of relative frequency, the probability axioms and the addition law of probability.
+In this lab, you got to practice your knowledge on the foundations of probability through working on problems regarding the law of relative frequency, the probability axioms, and the addition law of probability.
