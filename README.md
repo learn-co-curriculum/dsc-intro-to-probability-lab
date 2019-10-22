@@ -9,12 +9,8 @@ Now that you know what sets are, we can go on and work with two sets that are of
 
 You will be able to:
 
-- Learn about experiments, outcomes, and event space
-- Understand probability through relative frequency
-- Learn about the probability axioms
-- Learn about the addition law of probability
-- Learn that when each outcome is equally likely, the probability is equal to number of outcomes in the event space divided by number of outcomes in the sample space
-
+* Calculate probabilities by using relative frequency of outcomes to event space
+* Use Python to demonstrate the axioms of probability
 
 ##  Sample space, event space and the law of relative frequency
 
@@ -34,7 +30,7 @@ Now, let's assume that the event space is defined by "throwing a number higher t
 event = set([5,6])
 ```
 
-Now use the formula $P(E) = \dfrac{|E|}{|S|}$ (this formula is called "Laplace's formula" and strongly related to the law of relative frequency) to calculate the probability.
+Now use the formula $P(E) = \dfrac{|E|}{|S|}$ (This formula is called "Laplace's formula" and strongly related to the law of relative frequency) to calculate the probability.
 
 
 ```python
@@ -79,7 +75,7 @@ You can do this by specifying the argument `size` within the numpy function used
 
 
 ```python
-np.random.seed(12345) # to make sure there is no randomness
+np.random.seed(12345) # to ensure reproducibility of results
 
 dice_10 = np.random.randint(1,7,size=10)
 dice_1k = np.random.randint(1,7,size=1000)
@@ -87,7 +83,7 @@ dice_1m = np.random.randint(1,7,size=1000000)
 dice_100m = np.random.randint(1,7,size=100000000)
 ```
 
-next, let's count the number of "events". Remember that an event here is defined as throwing a 5 or a 6. Store them in the values below.
+Next, let's count the number of "events". Remember that an event here is defined as throwing a 5 or a 6. Store them in the values below.
 
 
 ```python
@@ -163,7 +159,7 @@ We want to make sure that the three probability axioms are fulfilled because the
 
 The third axiom is fairly ad hoc, and you will basically have to deduce from the context whether individual events are independent. It is fairly straightforward, however, that people cannot be inhabitants of two continents at the same time, so for now, we will assume that we're good for axiom three.
 
-However, we can use the numpy array `continents` to verify if axiom 1 and 2 are fulfilled. Create a function "axioms" that returns the message "We're good!" if both axiom 1 and 2 are fulfilled, and "Not quite!" if that's not the case.
+However, we can use the numpy array `continents` to verify if axiom 1 and 2 are fulfilled. Create a function `check_axioms` with a single input, `sample_space`, that returns the message "We're good!" if both axiom 1 and 2 are fulfilled, and "Not quite!" if that's not the case.
 
 
 ```python
@@ -177,7 +173,7 @@ def check_axioms(sample_space):
         return("Not quite!")
 ```
 
-Now test your newly created function out on `continents`
+Now test your newly created function out on the sample space `continents`:
 
 
 ```python
@@ -249,7 +245,7 @@ Use Python to obtain the following probabilities:
 
 #### a. What is the probability of throwing a 5 at least once?
 
-First, use sample_dice to get "True" values for each time a 5 occurs. This means that, 
+First, use `sample_dice` to get "True" values for each time a 5 occurs.
 
 
 ```python
@@ -269,7 +265,7 @@ print(true_5)
       True  True  True  True  True  True False False False False  True False]
 
 
-Applying the `sum()` function you can get to the total number of items in the event space. Divide this by the total number in the sample space.
+Applying the `sum()` function to this result you can get to the total number of items in the event space. Divide this number by the total number in the sample space to obtain the probability of throwing a 5 at least once.
 
 
 ```python
@@ -334,7 +330,7 @@ print(prob_sum_8)
 
 A teaching assistant is holding office hours so students can make appointments. She has 6 appointments scheduled today, 3 by male students, and 3 by female students. 
 
-Create a NumPy array of possible outcomes in the same way as we did in the "throwing a dice twice" exercise. It will be quite a bit of typing, as your resulting NumPy array will have a shape (20,6)!
+Create a NumPy array of all possible orders of three male and three female students in which the teaching assistant can see students by appointment. Create this NumPy array in the same way as we did in the "throwing a dice twice" exercise. It will be quite a bit of typing, as your resulting NumPy array will have a shape (20,6)!
 
 
 ```python
@@ -435,20 +431,20 @@ np.sum((sample_mf[:,4:]== ['M','M']).all(axis=1))/sample_length
 You noticed that coming up with the sample space was probably the most time-consuming part of the exercise, and it would really become unfeasible to write this down for say, 10 or, even worse, 20 appointments in a row. You'll learn about methods that make this process easier soon!
 
 ## The Addition Law of Probability
-At a supermarket, we randomly select customers, and make notes of whether a certain customer owns a Visa card (event A) or an Amex credit card (event B). Some customers own both cards.
+At a supermarket, we randomly select customers, and make notes of whether a certain customer owns a Visa card (event A) or an American Express credit card (event B). Some customers own both cards.
 You can assume that:
 
 - P(A) = 0.5
 - P(B) = 0.4
 - both A and B = 0.25.
 
-1) compute the probability that a selected customer has at least one credit card.
+1) Compute the probability that a selected customer has at least one credit card.
 
-2) compute the probability that a selected customer doesn't own any of the mentioned credit cards.
+2) Compute the probability that a selected customer doesn't own any of the mentioned credit cards.
 
-3) compute the probability that a customer *only* owns VISA card.
+3) Compute the probability that a customer *only* owns VISA card.
 
-(You can use python here, but you don't have to)
+(You can use Python here, but you don't have to)
 
 
 
