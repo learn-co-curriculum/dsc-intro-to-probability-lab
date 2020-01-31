@@ -330,7 +330,7 @@ print(prob_sum_8)
 
 A teaching assistant is holding office hours so students can make appointments. She has 6 appointments scheduled today, 3 by male students, and 3 by female students. 
 
-Create a NumPy array of all possible orders of three male and three female students in which the teaching assistant can see students by appointment. Create this NumPy array in the same way as we did in the "throwing a dice twice" exercise. It will be quite a bit of typing, as your resulting NumPy array will have a shape (20,6)!
+Create a NumPy array of all possible orders of three male and three female students in which the teaching assistant can see students by appointment (please note: only consider gender when creating event space). Create this NumPy array in the same way as we did in the "throwing a dice twice" exercise. It will be quite a bit of typing, as your resulting NumPy array will have a shape (20,6)!
 
 
 ```python
