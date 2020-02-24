@@ -131,7 +131,7 @@ We want to make sure that the three probability axioms are fulfilled because the
 
 - if we have a sample space $S$ (or $\Omega$)
 - if we have an event space $E$ and a probability measure $P$, 
-- **and** the three probability axioms are fulfilled, 
+- **and** the three probability axioms introduced in the previous lesson are fulfilled, 
 
 The third axiom is fairly ad hoc, and you will basically have to deduce from the context whether individual events are independent. It is fairly straightforward, however, that people cannot be inhabitants of two continents at the same time, so for now, we will assume that we're good for axiom three.
 
