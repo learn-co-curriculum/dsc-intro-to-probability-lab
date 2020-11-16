@@ -411,7 +411,7 @@ print(num_F)
 
 
 ```python
-F_2plus = np.sum(num_F > 1)
+F_2plus = num_F > 1
 print(F_2plus)
 ```
 
